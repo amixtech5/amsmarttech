@@ -28,57 +28,39 @@ const tipsData: Tip[] = [
     image: "/tips/windows11-productivity.jpg",
     slug: "windows-11-productivity-hacks-2026",
     content: (
-      <div className="prose prose-invert max-w-none">
-        <h2>1) Master Snap Layouts Like a Pro</h2>
-        <p>
-          Press <strong>Win + Z</strong> to open Snap Layouts and instantly organize windows.
-        </p>
+      <div className="space-y-8 mt-10">
 
-        <h2>2) Use Virtual Desktops for Separation</h2>
-        <p>
-          Press <strong>Win + Tab</strong> and create separate desktops for Work, Study, and Editing.
-        </p>
+  {/* Hack 1 */}
+  <div>
+    <h4 className="text-primary font-bold text-xl mb-2">
+      1. Master Snap Layouts Like a Pro
+    </h4>
+    <p className="text-muted-foreground leading-relaxed">
+      Press <strong>Win + Z</strong> to open Snap Layouts and instantly organize windows.
+    </p>
+  </div>
 
-        <h2>3) Clipboard History</h2>
-        <p>
-          Press <strong>Win + V</strong> to enable clipboard history and paste previous items.
-        </p>
+  {/* Hack 2 */}
+  <div>
+    <h4 className="text-primary font-bold text-xl mb-2">
+      2. Use Virtual Desktops for Separation
+    </h4>
+    <p className="text-muted-foreground leading-relaxed">
+      Press <strong>Win + Tab</strong> and create separate desktops for Work, Study, and Editing.
+    </p>
+  </div>
 
-        <h2>4) Focus Sessions</h2>
-        <p>
-          Use the Clock app Focus Sessions to reduce distractions while working.
-        </p>
+  {/* Hack 3 */}
+  <div>
+    <h4 className="text-primary font-bold text-xl mb-2">
+      3. Clipboard History
+    </h4>
+    <p className="text-muted-foreground leading-relaxed">
+      Press <strong>Win + V</strong> to enable clipboard history and paste previous items.
+    </p>
+  </div>
 
-        <h2>5) Power User Menu</h2>
-        <p>
-          Press <strong>Win + X</strong> for quick access to Task Manager, Terminal, Disk Management, and more.
-        </p>
-
-        <h2>6) File Explorer Tabs</h2>
-        <p>
-          Use tabs in File Explorer to reduce clutter and move files faster.
-        </p>
-
-        <h2>7) Voice Typing</h2>
-        <p>
-          Press <strong>Win + H</strong> to dictate text instantly for emails and notes.
-        </p>
-
-        <h2>8) Auto HDR</h2>
-        <p>
-          Go to <strong>Settings → Display → HDR</strong> to improve visuals.
-        </p>
-
-        <h2>9) PowerToys</h2>
-        <p>
-          Install Microsoft PowerToys for FancyZones, Keyboard Manager, and more.
-        </p>
-
-        <h2>10) Quick Settings Customization</h2>
-        <p>
-          Customize Quick Settings so the toggles you use most are always 1 click away.
-        </p>
-      </div>
+</div>
     ),
   },
 ];

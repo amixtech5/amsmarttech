@@ -7,17 +7,15 @@ const categories = ["All", "Windows", "Productivity", "Fixes", "Tutorials"];
 
 const allTips = [
   {
-    id: 1,
-    title: "10 Windows 11 Productivity Hacks (2026 Guide)",
-    description:
-      "Work smarter in 2026 with Snap Layouts, Virtual Desktops, Clipboard History, Focus Sessions, and more.",
-    category: "Windows",
-    readTime: "6 min read",
-    views: "125K",
-    image: "/placeholder.svg",
-    // ✅ This is the real route you already added in App.tsx
-    slug: "/windows-11-productivity-hacks-2026",
-  },
+  id: 10,
+  title: "10 Windows 11 Productivity Hacks (2026 Guide)",
+  description: "Work smarter in 2026 with Snap Layouts, Virtual Desktops, Clipboard History, Focus Sessions, and more.",
+  category: "Productivity",
+  readTime: "6 min read",
+  views: "125K",
+  image: "/tips/windows11-productivity.jpg",
+  slug: "windows-11-productivity-hacks-2026",
+},
   {
     id: 2,
     title: "Speed Up Your PC in 5 Minutes",

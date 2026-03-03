@@ -9,10 +9,6 @@ interface Tip {
   readTime: string;
   views: string;
   image: string;
-
-  // IMPORTANT:
-  // Put a FULL path here, e.g. "/windows-11-productivity-hacks-2026"
-  // (not just "windows-11-productivity-hacks-2026")
   slug: string;
 }
 
@@ -29,22 +25,26 @@ const categoryColors: Record<string, string> = {
 };
 
 const TipCard = ({ tip, index = 0 }: TipCardProps) => {
-  // If slug already starts with "/", use it.
-  // Otherwise fallback to the old "/tips/slug" format.
-  const to = tip.slug.startsWith("/") ? tip.slug : `/tips/${tip.slug}`;
-
   return (
     <Link
-      to={to}
-      className="group card-interactive flex flex-col overflow-hidden"
+      to={`/tips/${tip.slug}`}
+      className="group card-interactive flex flex-col overflow-hidden rounded-2xl border border-border bg-card"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       {/* Image */}
       <div className="relative aspect-video overflow-hidden bg-secondary">
-        <div className="absolute inset-0 bg-gradient-primary opacity-20" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center">
-            <ArrowUpRight className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
+        <img
+          src={tip.image}
+          alt={tip.title}
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+          onError={(e) => {
+            (e.currentTarget as HTMLImageElement).style.display = "none";
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
+        <div className="absolute right-4 top-4">
+          <div className="w-10 h-10 rounded-full bg-background/40 border border-border flex items-center justify-center backdrop-blur">
+            <ArrowUpRight className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
           </div>
         </div>
       </div>

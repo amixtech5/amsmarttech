@@ -31,10 +31,7 @@ const App = () => (
           <Route path="/tips/:slug" element={<TipArticle />} />
 
           {/* (optional) redirect your old direct URL to the new one */}
-          <Route
-            path="/windows-11-productivity-hacks-2026"
-            element={<Navigate to="/tips/windows-11-productivity-hacks-2026" replace />}
-          />
+          
 
           <Route path="/about" element={<About />} />
           <Route path="/resources" element={<Resources />} />

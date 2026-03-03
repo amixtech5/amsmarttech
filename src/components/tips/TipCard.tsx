@@ -9,6 +9,10 @@ interface Tip {
   readTime: string;
   views: string;
   image: string;
+
+  // IMPORTANT:
+  // Put a FULL path here, e.g. "/windows-11-productivity-hacks-2026"
+  // (not just "windows-11-productivity-hacks-2026")
   slug: string;
 }
 
@@ -25,9 +29,13 @@ const categoryColors: Record<string, string> = {
 };
 
 const TipCard = ({ tip, index = 0 }: TipCardProps) => {
+  // If slug already starts with "/", use it.
+  // Otherwise fallback to the old "/tips/slug" format.
+  const to = tip.slug.startsWith("/") ? tip.slug : `/tips/${tip.slug}`;
+
   return (
     <Link
-      to={`/tips/${tip.slug}`}
+      to={to}
       className="group card-interactive flex flex-col overflow-hidden"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
@@ -46,7 +54,8 @@ const TipCard = ({ tip, index = 0 }: TipCardProps) => {
         {/* Category Badge */}
         <span
           className={`inline-flex self-start px-3 py-1 rounded-full text-xs font-medium border ${
-            categoryColors[tip.category] || "bg-primary/10 text-primary border-primary/20"
+            categoryColors[tip.category] ||
+            "bg-primary/10 text-primary border-primary/20"
           }`}
         >
           {tip.category}

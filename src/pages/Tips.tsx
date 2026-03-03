@@ -8,13 +8,15 @@ const categories = ["All", "Windows", "Productivity", "Fixes", "Tutorials"];
 const allTips = [
   {
     id: 1,
-    title: "10 Hidden Windows 11 Features You Need to Know",
-    description: "Discover powerful features hidden in Windows 11 that will transform how you work.",
+    title: "10 Windows 11 Productivity Hacks (2026 Guide)",
+    description:
+      "Work smarter in 2026 with Snap Layouts, Virtual Desktops, Clipboard History, Focus Sessions, and more.",
     category: "Windows",
-    readTime: "5 min read",
+    readTime: "6 min read",
     views: "125K",
     image: "/placeholder.svg",
-    slug: "hidden-windows-11-features",
+    // ✅ This is the real route you already added in App.tsx
+    slug: "/windows-11-productivity-hacks-2026",
   },
   {
     id: 2,
@@ -104,7 +106,8 @@ const Tips = () => {
 
   const filteredTips = allTips.filter((tip) => {
     const matchesCategory = activeCategory === "All" || tip.category === activeCategory;
-    const matchesSearch = tip.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    const matchesSearch =
+      tip.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       tip.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
@@ -122,7 +125,7 @@ const Tips = () => {
               Tech <span className="gradient-text">Tips & Tutorials</span>
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Browse our collection of Windows tips, productivity hacks, and PC tutorials 
+              Browse our collection of Windows tips, productivity hacks, and PC tutorials
               to level up your tech skills.
             </p>
           </div>
@@ -174,7 +177,9 @@ const Tips = () => {
             </div>
           ) : (
             <div className="text-center py-16">
-              <p className="text-muted-foreground text-lg">No tips found matching your criteria.</p>
+              <p className="text-muted-foreground text-lg">
+                No tips found matching your criteria.
+              </p>
               <button
                 onClick={() => {
                   setActiveCategory("All");

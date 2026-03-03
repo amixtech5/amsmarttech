@@ -170,7 +170,7 @@ const About = () => {
                 Twitter
               </a>
               <a
-                href="https://youtube.com/@amsmarttech"
+                href="https://youtube.com/@amsmarttech1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-6 py-3 rounded-xl bg-[#FF0000] text-white font-semibold hover:opacity-90 transition-opacity"

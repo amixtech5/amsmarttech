@@ -13,7 +13,7 @@ const allTips = [
   category: "Productivity",
   readTime: "6 min read",
   views: "125K",
-  image: "/tips/windows11-productivity.jpg",
+  image: "/tips/windows11-productivity.png",
   slug: "windows-11-productivity-hacks-2026",
 },
   {

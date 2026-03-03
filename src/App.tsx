@@ -1,4 +1,5 @@
 
+import Windows11ProductivityHacks from "./pages/Windows11ProductivityHacks";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -22,6 +23,10 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
+          <Route
+  path="/windows-11-productivity-hacks-2026"
+  element={<Windows11ProductivityHacks />}
+/>
           <Route path="/" element={<Index />} />
           <Route path="/tips" element={<Tips />} />
           <Route path="/about" element={<About />} />

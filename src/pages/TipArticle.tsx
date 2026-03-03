@@ -227,9 +227,7 @@ export default function TipArticle() {
             </div>
 
             {/* Article */}
-            <div className="mb-6 rounded-xl border border-border bg-background/40 px-4 py-3 text-sm text-primary">
-  DEPLOY TEST: TipArticle updated ✅ (10 tips)
-</div>
+            
             <div className="p-6 md:p-10">{tip.content}</div>
           </div>
         </div>
